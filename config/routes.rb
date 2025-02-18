@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   # 
   get '/', to: 'welcome#index'
   get '/lists', to: "lists#index"
+  get '/lists/:id', to: "lists#show"
 end
