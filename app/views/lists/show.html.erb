@@ -1,9 +1,11 @@
 Name Minimum Number In Stock Type Note
 <% @list.items.each do |item| %>
-   <div class="center-stuff"> <%= item.name %>
+<p>
+    <%= item.name %>
     <%= item.minimum %>
     <%= item.number_in_stock %>
     <%= item.item_type %>
     <%= item.note %>
+    </p>
 <% end %>
-</div>
+    <%= link_to 'New Item', "/lists/#{@list.id}/items/new"%>
