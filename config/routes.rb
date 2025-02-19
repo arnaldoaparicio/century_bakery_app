@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get '/lists/:id', to: "lists#show"
 
   get '/lists/:id/items/new', to: 'items#new'
+  post '/items', to: 'items#create'
 end
