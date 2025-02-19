@@ -1,0 +1,18 @@
+<%= form_with url: "/items", method: :post, data: { turbo: false } do |form| %>
+    <%= form.label "Name" %>
+    <%= form.text_field :name %>
+
+    <%= form.label "Minimum" %>
+    <%= form.text_field :minimum %>
+
+    <%= form.label "Number In Stock" %>
+    <%= form.text_field :number_in_stock %>
+
+    <%= form.label "Item Type" %>
+    <%= form.text_field :item_type %>
+
+    <%= form.label "Note"%>
+    <%= form.text_field :note %>
+
+    <%= form.submit 'Create Item' %>
+<% end %>
