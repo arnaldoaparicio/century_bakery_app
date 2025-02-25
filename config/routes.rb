@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   get '/lists/:id', to: "lists#show"
 
   get '/lists/:id/items/new', to: 'items#new'
-  post '/items', to: 'items#create'
   get '/items/:id/edit', to: '#items#edit'
-
+  
+  post '/items', to: 'items#create'
+  delete '/items/:id', to: 'items#destroy'
   
 end
