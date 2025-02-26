@@ -11,9 +11,11 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
   get '/lists', to: "lists#index"
   get '/lists/:id', to: "lists#show"
+  get '/lists/:id/edit', to: 'lists#edit'
 
   get '/lists/:list_id/items/new', to: 'items#new'
-  get '/lists/:list_id/items/:id/edit', to: '#items#edit'
+  get '/lists/:list_id/items/:id', to: 'items#show'
+  # get '/lists/:list_id/items/:id/edit', to: '#items#edit'
   
   post '/lists/:list_id/items', to: 'items#create'
   delete '/lists/:list_id/items/:id', to: 'items#destroy'
