@@ -8,6 +8,18 @@ class ItemsController < ApplicationController
     redirect_to '/'
   end
 
+  def edit
+    
+  end
+
+  def destroy
+    
+  end
+
+  def show
+    
+  end
+
   private
   def item_params
     params.permit(:name, :minimum, :number_in_stock, :item_type, :note, :list_id)
