@@ -16,3 +16,7 @@ This will be a web app until I figure out how to create it on Android or iOS.
 </picture>
 
 (Based on the Century Bakery logo. Logo subject to change.)
+
+
+## What's next?
+HTML, CSS, and Javascript stuff, more verbs, Amazon S3 implementation, OAuth
