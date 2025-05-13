@@ -1,11 +1,23 @@
-Name Minimum Number In Stock Type Note
-<% @list.items.each do |item| %>
-<p>
-    <%= item.name %>
-    <%= item.minimum %>
-    <%= item.number_in_stock %>
-    <%= item.item_type %>
-    <%= item.note %>
-    </p>
-<% end %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Minimum</th>
+      <th scope="col">Number In Stock</th>
+      <th scope="col">Type</th>
+      <th scope="col">Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @list.items.each do |item| %>
+    <tr>
+      <td item.name %></td>
+      <td><%= item.minimum %></td>
+      <td><%= item.number_in_stock %></td>
+      <td><%= item.item_type %></td>
+      <td><%= item.note %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
     <%= link_to 'New Item', "/lists/#{@list.id}/items/new"%>
