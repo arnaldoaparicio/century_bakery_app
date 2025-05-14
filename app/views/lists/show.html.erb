@@ -4,6 +4,7 @@
       <th scope="col">Name</th>
       <th scope="col">Minimum</th>
       <th scope="col">Number In Stock</th>
+      <th scope="col">Need</th>
       <th scope="col">Type</th>
       <th scope="col">Note</th>
     </tr>
@@ -11,9 +12,10 @@
   <tbody>
     <% @list.items.each do |item| %>
     <tr>
-      <td item.name %></td>
+      <td><%= item.name %></td>
       <td><%= item.minimum %></td>
       <td><%= item.number_in_stock %></td>
+      <td><%= item.need %> </td>
       <td><%= item.item_type %></td>
       <td><%= item.note %></td>
       <% end %>
