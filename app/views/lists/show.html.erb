@@ -1,25 +1,34 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Minimum</th>
-      <th scope="col">Number In Stock</th>
-      <th scope="col">Need</th>
-      <th scope="col">Type</th>
-      <th scope="col">Note</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @list.items.each do |item| %>
-    <tr>
-      <td><%= item.name %></td>
-      <td><%= item.minimum %></td>
-      <td><%= item.number_in_stock %></td>
-      <td><%= item.need %> </td>
-      <td><%= item.item_type %></td>
-      <td><%= item.note %></td>
-      <% end %>
-    </tr>
-  </tbody>
-</table>
-    <%= link_to 'New Item', "/lists/#{@list.id}/items/new"%>
+<div class="container">
+  <div class="row">
+    <div class="col-2 no-gutters align-left">
+      <%= render "layouts/header" %>
+    </div>
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Minimum</th>
+            <th scope="col">Number In Stock</th>
+            <th scope="col">Need</th>
+            <th scope="col">Type</th>
+            <th scope="col">Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @list.items.each do |item| %>
+            <tr>
+              <td><%= item.name %></td>
+              <td><%= item.minimum %></td>
+              <td><%= item.number_in_stock %></td>
+              <td><%= item.need %> </td>
+              <td><%= item.item_type %></td>
+              <td><%= item.note %></td>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
+      <%= link_to 'New Item', "/lists/#{@list.id}/items/new"%>
+    </div>
+  </div>
+</div>
