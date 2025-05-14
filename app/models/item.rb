@@ -8,7 +8,11 @@ class Item < ApplicationRecord
   }
 
   def need
-    minimum - number_in_stock
+    needed = minimum - number_in_stock
+    if needed < 0
+      'none'
+    else
+      needed
+    end
   end
 end
-
