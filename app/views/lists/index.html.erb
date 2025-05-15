@@ -1,4 +1,13 @@
-<br>
-<% @lists.each do |list| %>
-    <%= link_to list.name, "/lists/#{list.id}" %>
-<% end %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <%= render "layouts/header" %>
+    </div>
+    <div class="col-3">
+      <br>
+      <% @lists.each do |list| %>
+        <%= link_to list.name, "/lists/#{list.id}" %>
+      <% end %>
+    </div>
+  </div>
+</div>
