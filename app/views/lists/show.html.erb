@@ -13,6 +13,8 @@
             <th scope="col"># In Stock</th>
             <th scope="col">Need</th>
             <th scope="col">Note</th>
+            <th scope="col">Chk</th>
+            <th scope="col">Order</th>
           </tr>
         </thead>
         <tbody>
@@ -23,6 +25,8 @@
               <td class="text-center"><%= item.number_in_stock %></td>
               <td class="text-center"><%= item.need %> </td>
               <td><%= item.note %></td>
+              <td><input type="checkbox" aria-label="Checkbox for following text input"></td>
+              <td><input size="3"></td>
             <% end %>
           </tr>
         </tbody>
