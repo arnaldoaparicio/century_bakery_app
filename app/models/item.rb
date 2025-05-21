@@ -1,7 +1,7 @@
 class Item < ApplicationRecord
   validates :name, presence: true
-  validates :minimum, presence: true
-  validates :number_in_stock, presence: true
+  validates :minimum, presence: true, numericality: true
+  validates :number_in_stock, presence: true, numericality: true
   validates :item_type, presence: true
   validates :note, presence: true
 
