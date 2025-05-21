@@ -1,4 +1,6 @@
 class Item < ApplicationRecord
+  validates :name, presence: true
+
   belongs_to :list
 
   enum item_type: {
