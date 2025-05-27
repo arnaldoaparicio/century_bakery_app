@@ -27,6 +27,7 @@
               <td><%= item.note %></td>
               <td><input type="checkbox" aria-label="Checkbox for following text input"></td>
               <td><input size="3"></td>
+              <td><%= link_to 'EDIT', "/lists/#{params[:id]}/items/#{item.id}/edit" %></td>
             <% end %>
           </tr>
         </tbody>
