@@ -9,7 +9,8 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    
+    @list = List.find(params[:list_id])
+    @item = Item.find(params[:id])
   end
 
   def destroy
