@@ -20,6 +20,6 @@ Rails.application.routes.draw do
   post '/lists/:list_id/items', to: 'items#create'
   delete '/lists/:list_id/items/:id', to: 'items#destroy'
 
-  patch '/lists/:list_id/items/:id/edit', to: 'items#edit'
+  get '/lists/:list_id/items/:id/edit', to: 'items#edit'
   
 end
