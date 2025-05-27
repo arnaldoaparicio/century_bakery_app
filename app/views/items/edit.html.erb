@@ -1,16 +1,19 @@
 <h1>Edit Item</h1>
-<%= form_with url: "/lists/#{list_id}/items/#{@item.id}" method: :patch, local: true do |f| %>
+<%= form_with url: "/lists/#{@list.id}/items/#{@item.id }", method: :patch, local: true do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
 
     <%= f.label :minimum %>
     <%= f.number_field :minimum %>
 
-    <%= f.label :number_in_stock %>
-    <%= f.number_field :number_field %>
+    <%= f.label :number_in_stock, '# In Stock' %>
+    <%= f.number_field :number_in_stock %>
 
-    <%= f.label :item_type %>
+    <%= f.label :item_type, 'Item Type' %>
     <%= f.number_field :item_type %>
+
+    <%= f.label :note %>
+    <%= f.text_field :note %>
 
     <%= f.submit %>
 <% end %>
