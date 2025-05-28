@@ -1,20 +1,20 @@
 <%= form_with url: "/items", method: :post, data: { turbo: false } do |form| %>
-    <%= form.label "Name" %>
-    <%= form.text_field :name %>
+  <%= form.label "Name" %>
+  <%= form.text_field :name %>
 
-    <%= form.label "Minimum" %>
-    <%= form.text_field :minimum %>
+  <%= form.label "Minimum" %>
+  <%= form.text_field :minimum %>
 
-    <%= form.label "Number In Stock" %>
-    <%= form.text_field :number_in_stock %>
+  <%= form.label "Number In Stock" %>
+  <%= form.text_field :number_in_stock %>
 
-    <%= form.label "Item Type" %>
-    <%= form.text_field :item_type %>
+  <%= form.label "Item Type" %>
+  <%= form.text_field :item_type %>
 
-    <%= form.label "Note"%>
-    <%= form.text_field :note %>
+  <%= form.label "Note"%>
+  <%= form.text_field :note %>
 
-    <%= hidden_field_tag 'list_id', params[:id] %>
-
-    <%= form.submit 'Create Item' %>
+  <%= hidden_field_tag 'list_id', params[:id] %>
+  
+  <%= form.submit 'Create Item' %>
 <% end %>
