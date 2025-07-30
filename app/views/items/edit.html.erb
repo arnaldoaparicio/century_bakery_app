@@ -1,3 +1,5 @@
+<p>Change details about item</p>
+<p>Be sure to have proper permissions from store manager before making any changes.</p>
 <h1>Edit Item</h1>
 <%= form_with url: "/lists/#{@list.id}/items/#{@item.id }", method: :patch, local: true do |f| %>
   <%= f.label :name %>
