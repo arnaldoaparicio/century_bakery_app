@@ -1,3 +1,5 @@
+<p>Add a new item to this list</p>
+<p>Remember to have proper authorizations from the store manager before creating anything new.</p>
 <%= form_with url: "/items", method: :post, data: { turbo: false } do |form| %>
   <%= form.label "Name" %>
   <%= form.text_field :name %>
